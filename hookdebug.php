@@ -1,3 +1,6 @@
+<?php
+
+  ob_start(); ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,4 +33,8 @@
 ?>
   </div>
 </body>
-</html>
+</html><?php
+
+  $debug_output = ob_get_contents();
+  $result = file_put_contents('_output/result-'.date('Md-His').'.html');
+  ob_end_clean();
