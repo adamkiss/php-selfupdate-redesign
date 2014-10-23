@@ -29,11 +29,17 @@
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s');?></h1>
 <?php
+  ignore_user_abort(true);
   require_once __DIR__.'/vendor/autoload.php';
   use Tracy\Debugger;
   Debugger::enable(Debugger::DEVELOPMENT);
 
-  dump($_POST);
+  if (!empty($_POST['payload'])) {
+    $payload = json_decode($_POST['payload']);
+    dump($payload);
+  else{
+    echo "<h1>PAYLOAD EMPTY WAT</h1>";
+  }
 ?>
   </div>
 </body>
