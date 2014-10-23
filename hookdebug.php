@@ -34,7 +34,7 @@
 
       if (!empty($input)) {
         $json = json_decode($input);
-        var_dump($json);
+        echo $json->commits[0]->modified;
       }else{
         echo ":(";
       }
