@@ -20,28 +20,25 @@
       margin: 0 auto;
       padding-top: 60px;
     }
+    pre {
+      font: 400 1.2em/1.6 "Source Code Pro";
+    }
   </style>
-  <link rel="stylesheet" href="/vendor/tracy/tracy/src/Tracy/templates/dumper.css">
-  <script src="/vendor/tracy/tracy/src/Tracy/templates/tracyQ.js"></script>
-  <script src="/vendor/tracy/tracy/src/Tracy/templates/dumper.js"></script>
 </head>
 <body>
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s');?></h1>
+    <pre>
 <?php
-
-  ignore_user_abort(true);
-  require_once __DIR__.'/vendor/autoload.php';
-  use Tracy\Debugger;
-  Debugger::enable(Debugger::DEVELOPMENT);
 
   if (!empty($_POST['payload'])) {
     $payload = json_decode($_POST['payload']);
-    dump($payload);
+    var_dump($payload);
   else{
     echo "<h1>PAYLOAD EMPTY WAT</h1>";
   }
 ?>
+</pre>
   </div>
 </body>
 </html><?php
