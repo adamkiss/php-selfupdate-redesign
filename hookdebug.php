@@ -31,7 +31,7 @@
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s'); ?></h1>
     <pre><?php
-      var_dump($_POST);
+      var_dump($_REQUEST['payload']);
 
       if (!empty($_POST['payload'])) {
         $payload = json_decode($_POST['payload']);
