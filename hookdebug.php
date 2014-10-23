@@ -32,15 +32,29 @@
     <pre><?php
       $input = file_get_contents ("php://input");
 
+      function copy_github_file($filename) {
+        $file = file_get_contents("https://raw.githubusercontent.com/adamkiss/rdsgn.adamkiss.com/master/{$filename}");
+        // if file exists in raw repo
+        if (!empty($file)) {
+          $result = file_put_contents(__DIR__."/{$filename}", $file);
+          return $result;
+        }else{
+          return null;
+        }
+      }
+
       if (!empty($input)) {
         $json = json_decode($input);
-        var_dump($json);
-        // foreach ($json->commits[0]->modified as $filename){
-        //   if ($filename !== 'hookdebug.php'){
-        //     $new_version = file_get_contents("https://raw.githubusercontent.com/adamkiss/rdsgn.adamkiss.com/master/{$filename}");
-        //     $file_result = file_put_contents(__DIR__."/{$filename}", $new_version);
-        //   }
-        // }
+        $commit = $json->commits[0];
+        foreach ($commit->added as $fn){
+          copy_github_file($fn);
+        }
+        foreach ($commit->modified as $fn){
+          if ($fn !== 'hookdebug.php'){
+            copy_github_file($fn);
+          }
+        }
+        foreach
       }else{
         echo ":(";
       }
