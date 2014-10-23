@@ -27,19 +27,16 @@
 </head>
 <body>
   <!-- ngrok -subdomain=ghhooktest lghlocal.dev:80 -->
-  YOU DID GOOD
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s'); ?></h1>
     <pre><?php
-      var_dump($_REQUEST);
-      $json = file_get_contents ("php://input");
-      var_dump($json);
+      $input = file_get_contents ("php://input");
 
-      if (!empty($_REQUEST['payload'])) {
-        //$payload = json_decode($_POST['payload']);
-        var_dump($_REQUEST['payload']);
+      if (!empty($input)) {
+        $json = json_decode($input);
+        var_dump($json);
       }else{
-        echo "<h1>PAYLOAD EMPTY WAT</h1>";
+        echo ":(";
       }
 
     ?></pre>
