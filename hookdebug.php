@@ -27,7 +27,7 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1><?= date('D.M.Y H:i:s');?></h1>
+    <h1><?= date('d M Y H:i:s');?></h1>
 <?php
   require_once __DIR__.'/vendor/autoload.php';
   use Tracy\Debugger;
