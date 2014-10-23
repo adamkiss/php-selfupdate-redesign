@@ -27,18 +27,18 @@
 </head>
 <body>
   <div class="wrapper">
-    <h1><?= date('d M Y H:i:s');?></h1>
-    <pre>
-<?php
+    <h1><?= date('d M Y H:i:s'); ?></h1>
+    <pre><?php
+      var_dump($_POST);
 
-  if (!empty($_POST['payload'])) {
-    $payload = json_decode($_POST['payload']);
-    var_dump($payload);
-  else{
-    echo "<h1>PAYLOAD EMPTY WAT</h1>";
-  }
-?>
-</pre>
+      if (!empty($_POST['payload'])) {
+        $payload = json_decode($_POST['payload']);
+        var_dump($payload);
+      else{
+        echo "<h1>PAYLOAD EMPTY WAT</h1>";
+      }
+
+    ?></pre>
   </div>
 </body>
 </html><?php
