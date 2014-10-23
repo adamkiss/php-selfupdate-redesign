@@ -29,6 +29,7 @@
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s');?></h1>
 <?php
+
   ignore_user_abort(true);
   require_once __DIR__.'/vendor/autoload.php';
   use Tracy\Debugger;
