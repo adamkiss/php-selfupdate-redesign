@@ -54,7 +54,6 @@
             copy_github_file($fn);
           }
         }
-        foreach
       }else{
         echo ":(";
       }
