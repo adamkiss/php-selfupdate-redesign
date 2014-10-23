@@ -31,11 +31,11 @@
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s'); ?></h1>
     <pre><?php
-      var_dump($_SERVER);
+      var_dump($_REQUEST['payload']);
 
-      if (!empty($_POST['payload'])) {
+      if (!empty($_REQUEST['payload'])) {
         //$payload = json_decode($_POST['payload']);
-        var_dump($payload);
+        var_dump($_REQUEST['payload']);
       }else{
         echo "<h1>PAYLOAD EMPTY WAT</h1>";
       }
