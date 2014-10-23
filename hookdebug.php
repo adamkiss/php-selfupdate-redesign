@@ -32,6 +32,7 @@
     <h1><?= date('d M Y H:i:s'); ?></h1>
     <pre><?php
       var_dump($_REQUEST);
+      var_dump('why');
 
       if (!empty($_REQUEST['payload'])) {
         //$payload = json_decode($_POST['payload']);
