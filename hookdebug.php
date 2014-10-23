@@ -32,6 +32,12 @@
     <pre><?php
       $input = file_get_contents ("php://input");
 
+      function assure_path($filename){
+        if (!file_exists(dirname($filename))){
+          mkdir(dirname($filename), 0777, true);
+        }
+      }
+
       function copy_github_file($filename) {
         $file = file_get_contents("https://raw.githubusercontent.com/adamkiss/rdsgn.adamkiss.com/master/{$filename}");
         // if file exists in raw repo
@@ -48,6 +54,7 @@
         $json = json_decode($input);
         $commit = $json->commits[0];
         foreach ($commit->added as $fn){
+          assure_path($fn);
           copy_github_file($fn);
         }
         foreach ($commit->modified as $fn){
