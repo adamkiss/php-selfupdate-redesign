@@ -36,6 +36,7 @@
         $file = file_get_contents("https://raw.githubusercontent.com/adamkiss/rdsgn.adamkiss.com/master/{$filename}");
         // if file exists in raw repo
         if (!empty($file)) {
+          echo "write: {$filename}\n";
           $result = file_put_contents(__DIR__."/{$filename}", $file);
           return $result;
         }else{
