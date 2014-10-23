@@ -34,7 +34,7 @@
       if (!empty($_POST['payload'])) {
         $payload = json_decode($_POST['payload']);
         var_dump($payload);
-      else{
+      }else{
         echo "<h1>PAYLOAD EMPTY WAT</h1>";
       }
 
