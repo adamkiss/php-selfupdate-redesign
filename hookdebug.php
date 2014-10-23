@@ -34,12 +34,13 @@
 
       if (!empty($input)) {
         $json = json_decode($input);
-        foreach ($json->commits[0]->modified as $filename){
-          if ($filename !== 'hookdebug.php'){
-            $new_version = file_get_contents("https://raw.githubusercontent.com/adamkiss/rdsgn.adamkiss.com/master/{$filename}");
-            $file_result = file_put_contents(__DIR__."/{$filename}", $new_version);
-          }
-        }
+        var_dump($json);
+        // foreach ($json->commits[0]->modified as $filename){
+        //   if ($filename !== 'hookdebug.php'){
+        //     $new_version = file_get_contents("https://raw.githubusercontent.com/adamkiss/rdsgn.adamkiss.com/master/{$filename}");
+        //     $file_result = file_put_contents(__DIR__."/{$filename}", $new_version);
+        //   }
+        // }
       }else{
         echo ":(";
       }
