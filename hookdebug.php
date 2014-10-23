@@ -47,4 +47,4 @@
 
   $debug_output = ob_get_contents();
   $result = file_put_contents(__DIR__.'/_output/output.html', $debug_output);
-  ob_end_clean();
+  ob_end_flush();
