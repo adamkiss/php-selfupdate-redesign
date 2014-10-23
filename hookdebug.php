@@ -26,6 +26,8 @@
   </style>
 </head>
 <body>
+  <!-- ngrok -subdomain=ghhooktest lghlocal.dev:80 -->
+  YOU DID GOOD
   <div class="wrapper">
     <h1><?= date('d M Y H:i:s'); ?></h1>
     <pre><?php
