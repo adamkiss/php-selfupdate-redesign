@@ -7,11 +7,11 @@ Note: Checkboxes in readme don't change the note behind in list. Oh well.
 ## TODO
 
 - selfupdate.php
-  + Clean it up
+  + ~~Clean it up~~
   + ~~Make it ignore itself (too lazy to do selfupdate selfupdate)~~
     * ~~Test PHP script rewriting itself? (NO PROBLEM)~~
     * Obviously, PHP has no problem with rewriting running script. Hm.
-  + Make it (somewhat) safe by ignoring `..` and `.` (it's in root anyway)
+  + ~~Make it (somewhat) safe by ignoring `..` and `.` (it's in root anyway)~~
   + Make it recognize '--cache-clear'
 - hookdebug.php
   + remove this (it shouldn't be needed once self update is done)
