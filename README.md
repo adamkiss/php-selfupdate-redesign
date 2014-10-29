@@ -36,3 +36,4 @@ Note: Checkboxes in readme don't change the note behind in list. Oh well.
 
 ## Chaos here:
 - debugging
+- I'm an idiot?

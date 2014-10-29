@@ -37,14 +37,14 @@ if (!empty($input)) {
   $github_json = json_decode($input);
 
   // updated first
-  foreach ($json->commits[0]->modified as $filename){
+  foreach ($github_json->commits[0]->modified as $filename){
     echo "[*] {$filename}: ";
     $result = write_file($filename);
     echo "{$result}\n";
   }
 
   // now new
-  foreach ($json->commits[0]->added as $filename){
+  foreach ($github_json->commits[0]->added as $filename){
     echo "[+] {$filename}: ";
     $result = write_file($filename);
     echo "{$result}\n";
