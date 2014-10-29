@@ -34,4 +34,5 @@ Note: Checkboxes in readme don't change the note behind in list. Oh well.
 1. Commit
 1. It updates, so show off
 
-Q: Why was I playing with ngrok?
+## Chaos here:
+- debugging
