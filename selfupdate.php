@@ -17,7 +17,7 @@ function write_file($filename) {
 
     //write the file, if not empty (why would it be? bad network?)
     if (!empty($gh_file_contents)) {
-      $result = file_put_contents(__DIR__."/{$filename}", $contents);
+      $result = file_put_contents(__DIR__."/{$filename}", $gh_file_contents);
     } else {
       $result = 'GH File empty';
     }
