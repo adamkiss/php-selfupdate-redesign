@@ -33,12 +33,3 @@ Note: Checkboxes in readme don't change the note behind in list. Oh well.
 1. Be okay with it
 1. Commit
 1. It updates, so show off
-
-## Chaos here:
-- debugging
-- I'm an idiot?
-- Debugging
-- IT WORKS
-- NOW IT WORKS
-- Now?
-- Now?
