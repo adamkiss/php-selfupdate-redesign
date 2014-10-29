@@ -3,7 +3,7 @@
 // rewrite file function
 function write_file($filename) {
   // be totally safe
-  if (strpos($filename, '..') !== false) {
+  if (strpos($filename, '..') === false) {
 
     // does the file's directory exist?
     if (!file_exists(dirname($filename))){
