@@ -8,7 +8,7 @@ function write_file($filename) {
     // does the file's directory exist?
     if (!file_exists(dirname($filename))){
       // create it it.
-      mkdir(dirname($file), 0777, true);
+      mkdir(dirname($filename), 0777, true);
     }
 
     // read the file
@@ -38,14 +38,16 @@ if (!empty($input)) {
 
   // updated first
   foreach ($json->commits[0]->modified as $filename){
+    echo "[*] {$filename}: ";
     $result = write_file($filename);
-    echo "{$filename}: {$result}\n";
+    echo "{$result}\n";
   }
 
   // now new
   foreach ($json->commits[0]->added as $filename){
+    echo "[+] {$filename}: ";
     $result = write_file($filename);
-    echo "{$filename}: {$result}\n";
+    echo "{$result}\n";
   }
 
   // removed ignore. Because diskspace is cheap-o
