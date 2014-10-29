@@ -19,7 +19,7 @@ function write_file($filename) {
     if (!empty($gh_file_contents)) {
       $result = file_put_contents(__DIR__."/{$filename}", $contents);
     } else {
-      $result = 'GH File empty'
+      $result = 'GH File empty';
     }
   } else {
     // ignore. Dum dum dum
