@@ -39,3 +39,4 @@ Note: Checkboxes in readme don't change the note behind in list. Oh well.
 - I'm an idiot?
 - Debugging
 - IT WORKS
+- NOW IT WORKS
