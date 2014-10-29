@@ -6,8 +6,9 @@ This is just something I'm playing with — live redesign stuff. It's totally di
 
 - [ ] selfupdate.php
   + [ ] Clean it up
-  + [ ] Make it ignore itself (too lazy to do selfupdate selfupdate)
-    * [ ] Test PHP script rewriting itself?
+  + [x] Make it ignore itself (too lazy to do selfupdate selfupdate)
+    * [x] Test PHP script rewriting itself? (NO PROBLEM)
+    * Obviously, PHP has no problem with rewriting running script. Hm.
   + [ ] Make it (somewhat) safe by ignoring `..` and `.` (it's in root anyway)
   + [ ] Make it recognize '--cache-clear'
 - [ ] hookdebug.php
