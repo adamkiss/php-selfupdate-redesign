@@ -19,8 +19,6 @@
     $pw_page = curl_exec($ch);
     curl_close($ch);
 
-    var_dump($pw_page);
-
     $pw_page_code = htmlentities($pw_page);
 
     echo "<pre>{$pw_page_code}</pre>";
