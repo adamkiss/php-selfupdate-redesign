@@ -1,5 +1,22 @@
-RewriteCond %{REQUEST_URI} "^/~?[-_.a-zA-Z0-9/]*$"
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !(favicon\.ico|robots\.txt)
-RewriteRule ^(.*)$ index.php?req=$1 [L,QSA]
+Options -Indexes
+Options +FollowSymLinks
+
+<IfModule mod_php5.c>
+  php_flag magic_quotes_gpc   off
+  php_flag magic_quotes_sybase    off
+  php_flag register_globals   off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  AddDefaultCharset UTF-8
+
+  SetEnv HTTP_MOD_REWRITE On
+
+  RewriteCond %{REQUEST_URI} "^/~?[-_.a-zA-Z0-9/]*$"
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !(favicon\.ico|robots\.txt)
+  RewriteRule ^(.*)$ index.php?req=$1 [L,QSA]
+</IfModule>
