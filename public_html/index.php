@@ -7,8 +7,6 @@
   $use_cache = file_exists('../.bypass_cache');
   $cached = false;
 
-  var_dump($use_cache);
-
   if ($use_cache && $cached){
     // Load Cache
   }else{
