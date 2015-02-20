@@ -1,6 +1,6 @@
 <?php
 
-  $request = trim($_GET['request']);
+  $request = trim($_GET['req']);
 
   $use_cache = file_exists('../.bypass_cache');
   $cached = false;
