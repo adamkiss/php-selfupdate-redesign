@@ -1,5 +1,7 @@
 <?php
 
+  error_reporting(E_ALL);
+
   $request = trim($_GET['req']);
 
   $use_cache = file_exists('../.bypass_cache');
