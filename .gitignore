@@ -1,2 +1,3 @@
 _output/output.html
 cache/*
+!cache/.gitkeep
